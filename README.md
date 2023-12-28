@@ -28,7 +28,7 @@ sudo apt install certbot python3-certbot-nginx
 ## Usage
 ...
 
-# Nginx Configuration
+# Configuration
 
 Below is the Nginx configuration for your project.
 
@@ -64,8 +64,7 @@ server {
         try_files $uri /index.html;
     }
 }
-
-
+```
 ## License
 ...
 
