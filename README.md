@@ -1,8 +1,5 @@
-# portfolio-project-alx
-# Short Click
-# Project Title
+# Short click
 
-[Badges, if any]
 
 ## Table of Contents
 - [Installation](#installation)
