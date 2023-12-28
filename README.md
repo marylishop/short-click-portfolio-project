@@ -1,5 +1,6 @@
 # Short click
 ## E-commerce website 
+This project is a modern and robust e-commerce platform built using the Django web framework for the backend and Vue.js for the frontend. Designed with scalability and flexibility in mind, it provides a seamless and engaging shopping experience for users.
 
 ## Table of Contents
 - [Installation](#installation)
