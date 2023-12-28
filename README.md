@@ -8,7 +8,6 @@
 - [Contributing](#contributing)
 - [License](#license)
 - [Documentation](#documentation)
-- [Credits](#credits)
 - [Changelog](#changelog)
 - [Contact Information](#contact-information)
 - [Troubleshooting](#troubleshooting)
@@ -21,7 +20,9 @@
 - [Style Guide](#style-guide)
 
 ## Installation
-...
+```bash
+sudo apt install python3-pip python3-dev libpq-dev postgresql postgresql-contrib nginx
+sudo apt install certbot python3-certbot-nginx
 
 ## Usage
 ...
