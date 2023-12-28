@@ -23,6 +23,7 @@
 ```bash
 sudo apt install python3-pip python3-dev libpq-dev postgresql postgresql-contrib nginx
 sudo apt install certbot python3-certbot-nginx
+```
 
 ## Usage
 ...
