@@ -23,8 +23,20 @@ This project is a modern and robust e-commerce platform built using the Django w
 
 ## Installation
 ```bash
-sudo apt install python3-pip python3-dev libpq-dev postgresql postgresql-contrib nginx
-sudo apt install certbot python3-certbot-nginx
+virtualenv environment_3_8_2
+source environment_3_8_2/bin/activate
+pip3 install virtualenv
+pip3 install django
+pip3 install
+pip3 installdjango-rest-framework
+pip3 install django-cors-headers
+pip3 install pillow
+pip3 install stripe               
+```
+```
+django-admin startproject short_click
+python3 manage.py makemigrations
+python3 manage.py migrate    
 ```
 
 ## Usage
