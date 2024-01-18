@@ -16,7 +16,7 @@ Before you begin, ensure you have met the following requirements:
 
 ## Installing 
 
-To install **Anon**, follow these steps:
+To install **short click**, follow these steps:
 
 Linux and macOS:
 
