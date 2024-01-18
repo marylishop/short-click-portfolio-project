@@ -14,9 +14,7 @@ This project is a modern and robust e-commerce platform built using the Django w
 
 Before you begin, ensure you have met the following requirements:
 
-## Installing 
-
-To install **short click**, follow these steps:
+## install 
 
 Linux and macOS:
 
