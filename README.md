@@ -1,62 +1,51 @@
-# S O R T  C L I C K
+# SORT CLICK - E-commerce Website
 
-## E-commerce website 
-This project is a modern and robust e-commerce platform built using the Django web framework for the backend and html css and JavaScript  for the frontend. Designed with scalability and flexibility in mind, it provides a seamless and engaging shopping experience for users.
+SORT CLICK is a modern and robust e-commerce platform developed using the Django web framework for the backend and HTML, CSS, and JavaScript for the frontend. This project is designed with scalability and flexibility in mind, providing users with a seamless and engaging shopping experience.
+
+## Features
+
+- **User-friendly Interface**: The website offers an intuitive and easy-to-navigate interface for a pleasant shopping experience.
+
+- **Scalable Design**: Built with scalability in mind to accommodate the growth of products and users over time.
+
+- **Responsive Frontend**: The frontend is designed to be responsive, ensuring a consistent experience across various devices.
+
+## Technologies Used
+
+- **Backend**: Django
+- **Frontend**: HTML, CSS, JavaScript
+
+## Getting Started
+
+Follow these instructions to get a copy of the project up and running on your local machine.
+
+1. **Clone the Repository**:
+   ```bash
+  
+  git clone https://github.com/marylishop/portfolio-project-alx.git
+   cd sort-click
+Install Dependencies:
+bash
+Copy code
+pip install -r requirements.txt
+Run the Development Server:
+bash
+Copy code
+python manage.py runserver
+Access the Website:
+Open your browser and navigate to http://127.0.0.1:8000/
+Contributing
+
+If you would like to contribute to the project, please follow our Contribution Guidelines.
 
 
 
+Acknowledgments
 
-## Demo
+Special thanks to the Django community for the powerful web framework.
+Contact
 
-
-
-## Prerequisites
-
-Before you begin, ensure you have met the following requirements:
-
-## install 
-
-Linux and macOS:
-
-```bash
-
-```
-
-Windows:
-
-```bash
-# Short click - An eCommerce Website
-
-
-Anon is a fully responsive ecommerce website, maximum compatiblities in all mobile devices, built using HTML, CSS, and JavaScript.
-
-## Demo
-
-
-## Prerequisites
-
-Before you begin, ensure you have met the following requirements:
-
-
-
-## Installing Anon
-
-To install **Anon**, follow these steps:
-
-Linux and macOS:
-
-```bash
-
-```
-
-Windows:
-
-```bash
-
-```
-
-## Contact
-```
-
-## Contact
+For any inquiries or feedback, please contact us at 
+mari97149@gmail.com 
+fatimazohralakhal32@gmail.com
 
