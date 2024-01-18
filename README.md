@@ -1,120 +1,44 @@
 # Short click
 
 ## E-commerce website 
-This project is a modern and robust e-commerce platform built using the Django web framework for the backend and Vue.js for the frontend. Designed with scalability and flexibility in mind, it provides a seamless and engaging shopping experience for users.
+This project is a modern and robust e-commerce platform built using the Django web framework for the backend and html css and JavaScript  for the frontend. Designed with scalability and flexibility in mind, it provides a seamless and engaging shopping experience for users.
 
-## Table of Contents
-- [Installation](#installation)
-- [Usage](#usage)
-- [Configuration](#configuration)
-- [Contributing](#contributing)
-- [License](#license)
-- [Documentation](#documentation)
-- [Changelog](#changelog)
-- [Contact Information](#contact-information)
-- [Troubleshooting](#troubleshooting)
-- [Testing](#testing)
-- [Acknowledgments](#acknowledgments)
-- [Demo](#demo)
-- [Security](#security)
-- [Continuous Integration](#continuous-integration)
-- [Dependencies](#dependencies)
-- [Style Guide](#style-guide)
 
-## Installation
-```bash
-virtualenv environment_3_8_2
-source environment_3_8_2/bin/activate
-pip3 install virtualenv
-pip3 install django
-pip3 install
-pip3 installdjango-rest-framework
-pip3 install django-cors-headers
-pip3 install pillow
-pip3 install stripe               
-```
-```
-django-admin startproject short_click
-python3 manage.py makemigrations
-python3 manage.py migrate    
-```
 
-## Usage
-...
+![GitHub repo size](https://img.shields.io/github/repo-size/codewithsadee/anon-ecommerce-website)
+![GitHub stars](https://img.shields.io/github/stars/codewithsadee/anon-ecommerce-website?style=social)
+![GitHub forks](https://img.shields.io/github/forks/codewithsadee/anon-ecommerce-website?style=social)
+[![Twitter Follow](https://img.shields.io/twitter/follow/codewithsadee_?style=social)](https://twitter.com/intent/follow?screen_name=codewithsadee_)
+[![YouTube Video Views](https://img.shields.io/youtube/views/3l8Lob4ysI0?style=social)](https://youtu.be/3l8Lob4ysI0)
 
-# Configuration
 
-Below is the Nginx configuration for your project.
-
-```nginx
-server {
-    listen 80;
-    server_name short-click.codewithstein.com;
-    return 301 https://short-click.codewithstein.com$request_uri;
-}
-
-server {
-    listen 443 ssl;
-    server_name short-click.codewithstein.com;
-
-    client_max_body_size 4G;
-
-    error_log  /webapps/short-click/logs/error.log;
-    access_log /webapps/short-click/logs/access.log;
-
-    ssl_certificate /etc/letsencrypt/live/short-click.codewithstein.com/fullchain.pem;
-    ssl_certificate_key /etc/letsencrypt/live/short-click.codewithstein.com/privkey.pem;
-
-    ssl_protocols TLSv1 TLSv1.1 TLSv1.2;
-    ssl_prefer_server_ciphers on;
-    ssl_ciphers 'EECDH+AESGCM:EDH+AESGCM:AES256+EECDH:AES256+EDH';
-
-    charset utf-8;
-    root /webapps/short-click/vue/dist;
-    index index.html index.htm;
-
-    location / {
-        root /webapps/short-click/vue/dist;
-        try_files $uri /index.html;
-    }
-}
-```
-## License
-...
-
-[Include license file]
-
-## Documentation
-...
-
-## Credits
-...
-
-## Changelog
-...
-
-## Contact Information
-...
-
-## Troubleshooting
-...
-
-## Testing
-...
-
-## Acknowledgments
-...
 
 ## Demo
-...
 
-## Security
-...
+![short click Desktop Demo](./website-demo-image/desktop.png "Desktop Demo")
+![short click Mobile Demo](./website-demo-image/mobile.png "Mobile Demo")
 
-## Continuous Integration
-...
+## Prerequisites
 
-## Dependencies
-...
+Before you begin, ensure you have met the following requirements:
 
-## Style Guide
+* [Git](https://git-scm.com/downloads "Download Git") must be installed on your operating system.
+
+## Installing 
+
+To install **Anon**, follow these steps:
+
+Linux and macOS:
+
+```bash
+sudo git clone https://github.com/codewithsadee/.git
+```
+
+Windows:
+
+```bash
+git clone https://github.com/codewithsadee/anon-ecommerce-website.git
+```
+
+## Contact
+
