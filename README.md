@@ -1,6 +1,7 @@
 # SORT CLICK - E-commerce Website
 
 SORT CLICK is a modern and robust e-commerce platform developed using the Django web framework for the backend and HTML, CSS, and JavaScript for the frontend. This project is designed with scalability and flexibility in mind, providing users with a seamless and engaging shopping experience.
+https://github.com/marylishop/portfolio-project-alx/issues/1#issue-2088935644
 
 ## Features
 
