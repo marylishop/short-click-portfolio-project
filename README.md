@@ -50,3 +50,7 @@ Contact
 For any inquiries or feedback, please contact us at 
 mari97149@gmail.com 
 fatimazohralakhal32@gmail.com
+<<<<<<< HEAD
+=======
+
+>>>>>>> refs/remotes/origin/main
