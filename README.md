@@ -1,120 +1,52 @@
-# Short click
+# SHORT CLICK E-commerce Website
 
-## E-commerce website 
-This project is a modern and robust e-commerce platform built using the Django web framework for the backend and Vue.js for the frontend. Designed with scalability and flexibility in mind, it provides a seamless and engaging shopping experience for users.
+SHORT CLICK is a modern and robust e-commerce platform developed using the Django web framework for the backend and HTML, CSS, and JavaScript for the frontend. This project is designed with scalability and flexibility in mind, providing users with a seamless and engaging shopping experience.
+<img width="737" alt="Screenshot 2024-01-18 at 22 45 52" src="https://github.com/marylishop/portfolio-project-alx/assets/127736868/483d2e7c-075e-4c2c-b23f-9fd026dcd5b1">
 
-## Table of Contents
-- [Installation](#installation)
-- [Usage](#usage)
-- [Configuration](#configuration)
-- [Contributing](#contributing)
-- [License](#license)
-- [Documentation](#documentation)
-- [Changelog](#changelog)
-- [Contact Information](#contact-information)
-- [Troubleshooting](#troubleshooting)
-- [Testing](#testing)
-- [Acknowledgments](#acknowledgments)
-- [Demo](#demo)
-- [Security](#security)
-- [Continuous Integration](#continuous-integration)
-- [Dependencies](#dependencies)
-- [Style Guide](#style-guide)
+## Features
 
-## Installation
-```bash
-virtualenv environment_3_8_2
-source environment_3_8_2/bin/activate
-pip3 install virtualenv
-pip3 install django
-pip3 install
-pip3 installdjango-rest-framework
-pip3 install django-cors-headers
-pip3 install pillow
-pip3 install stripe               
-```
-```
-django-admin startproject short_click
-python3 manage.py makemigrations
-python3 manage.py migrate    
-```
+- **User-friendly Interface**: The website offers an intuitive and easy-to-navigate interface for a pleasant shopping experience.
 
-## Usage
-...
+- **Scalable Design**: Built with scalability in mind to accommodate the growth of products and users over time.
 
-# Configuration
+- **Responsive Frontend**: The frontend is designed to be responsive, ensuring a consistent experience across various devices.
 
-Below is the Nginx configuration for your project.
+## Technologies Used
 
-```nginx
-server {
-    listen 80;
-    server_name short-click.codewithstein.com;
-    return 301 https://short-click.codewithstein.com$request_uri;
-}
+- **Backend**: Django
+- **Frontend**: HTML, CSS, JavaScript
 
-server {
-    listen 443 ssl;
-    server_name short-click.codewithstein.com;
+## Getting Started
 
-    client_max_body_size 4G;
+Follow these instructions to get a copy of the project up and running on your local machine.
 
-    error_log  /webapps/short-click/logs/error.log;
-    access_log /webapps/short-click/logs/access.log;
+1. **Clone the Repository**:
+   ```bash
+  
+    https://github.com/marylishop/portfolio-project-alx.git
+    cd sort-click
+ ```
+Install Dependencies:
+bash
+Copy code
+pip install -r requirements.txt
+Run the Development Server:
+bash
+Copy code
+python manage.py runserver
+Access the Website:
+Open your browser and navigate to http://127.0.0.1:8000/
+Contributing
 
-    ssl_certificate /etc/letsencrypt/live/short-click.codewithstein.com/fullchain.pem;
-    ssl_certificate_key /etc/letsencrypt/live/short-click.codewithstein.com/privkey.pem;
+If you would like to contribute to the project, please follow our Contribution Guidelines.
 
-    ssl_protocols TLSv1 TLSv1.1 TLSv1.2;
-    ssl_prefer_server_ciphers on;
-    ssl_ciphers 'EECDH+AESGCM:EDH+AESGCM:AES256+EECDH:AES256+EDH';
 
-    charset utf-8;
-    root /webapps/short-click/vue/dist;
-    index index.html index.htm;
 
-    location / {
-        root /webapps/short-click/vue/dist;
-        try_files $uri /index.html;
-    }
-}
-```
-## License
-...
+Acknowledgments
 
-[Include license file]
+Special thanks to the Django community for the powerful web framework.
+Contact
 
-## Documentation
-...
-
-## Credits
-...
-
-## Changelog
-...
-
-## Contact Information
-...
-
-## Troubleshooting
-...
-
-## Testing
-...
-
-## Acknowledgments
-...
-
-## Demo
-...
-
-## Security
-...
-
-## Continuous Integration
-...
-
-## Dependencies
-...
-
-## Style Guide
+For any inquiries or feedback, please contact us at 
+mari97149@gmail.com 
+fatimazohralakhal32@gmail.com
