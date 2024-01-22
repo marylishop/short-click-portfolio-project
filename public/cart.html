@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Cart - Short Click</title>
+    <!-- Add your CSS styles or link an external stylesheet here -->
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color:hsl(353, 100%, 78%);
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .cart-item {
+            display: flex;
+            align-items: center;
+            border-bottom: 1px solid #ddd;
+            padding: 10px;
+        }
+
+        .cart-item img {
+            max-width: 100px;
+            margin-right: 20px;
+        }
+
+        .cart-item-details {
+            flex-grow: 1;
+        }
+
+        .cart-total {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            margin-top: 20px;
+        }
+
+        .cart-total p {
+            margin-right: 10px;
+        }
+
+        .checkout-btn {
+            background-color: hsl(353, 100%, 78%);;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .checkout-btn:hover {
+            background-color: hsl(353, 100%, 78%);;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Your Cart</h1>
+    </header>
+
+    <div class="container">
+
+        <!-- Sample Cart Items -->
+        <div class="cart-item">
+            <img src="./assets/images/products/4.jpg" alt="Product 1">
+            <div class="cart-item-details">
+                <h3>Product 1</h3>
+                <p>Quantity: 2</p>
+                <p>Price: $20.00 each</p>
+            </div>
+        </div>
+
+        <div class="cart-item">
+            <img src="./assets/images/products/2.jpg" alt="Product 2">
+            <div class="cart-item-details">
+                <h3>Product 2</h3>
+                <p>Quantity: 1</p>
+                <p>Price: $30.00 each</p>
+            </div>
+        </div>
+
+        <!-- Total Price -->
+        <div class="cart-total">
+            <p>Total:</p>
+            <strong>$50.00</strong>
+        </div>
+
+        <!-- Checkout Button -->
+        <button class="checkout-btn">Proceed to Checkout</button>
+
+    </div>
+
+</body>
+</html>
