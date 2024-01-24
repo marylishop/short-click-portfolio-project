@@ -13,7 +13,7 @@ SHORT CLICK is a modern and robust e-commerce platform developed using the node 
 
 ## Technologies Used
 
-- **Backend**: Django
+- **Backend**: node js express js 
 - **Frontend**: HTML, CSS, JavaScript
 
 ## Getting Started
@@ -33,7 +33,6 @@ pip install -r requirements.txt
 Run the Development Server:
 bash
 Copy code
-python manage.py runserver
 Access the Website:
 Open your browser and navigate to http://127.0.0.1:8000/
 Contributing
@@ -44,8 +43,8 @@ If you would like to contribute to the project, please follow our Contribution G
 
 Acknowledgments
 
-Special thanks to the Django community for the powerful web framework.
-Contact
+Special thanks to the node js express community for the powerful web framework.
+
 
 For any inquiries or feedback, please contact us at 
 mari97149@gmail.com 
