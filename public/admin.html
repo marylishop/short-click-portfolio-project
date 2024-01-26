@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Panel</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 20px;
+    }
+
+    h1 {
+      color: #ff69b4; /* Pink color */
+    }
+
+    .admin-container {
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+    }
+
+    .admin-container p {
+      margin-bottom: 10px;
+    }
+
+    .admin-container button {
+      background-color: #ff69b4; /* Pink color */
+      color: #fff;
+      padding: 10px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      margin-right: 10px;
+    }
+
+    .admin-container button:hover {
+      background-color: #d44d88; /* Darker pink on hover */
+    }
+
+    #usersContainer {
+      margin-top: 20px;
+    }
+  </style>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      document.getElementById('manageUsersBtn').addEventListener('click', function () {
+        // Fetch users when the "Manage Users" button is clicked
+        fetch('/admin/manageUsers')
+          .then(response => response.json())
+          .then(data => {
+            const usersContainer = document.getElementById('usersContainer');
+
+            // Clear previous content
+            usersContainer.innerHTML = '';
+
+            // Check if the response contains the list of users
+            if (data.users) {
+              // Loop through the users and append them to the container
+              data.users.forEach(user => {
+                const userElement = document.createElement('div');
+                userElement.textContent = user.username;
+                usersContainer.appendChild(userElement);
+              });
+            } else {
+              // Handle the case where the response does not contain the list of users
+              const errorElement = document.createElement('div');
+              errorElement.textContent = 'Error fetching users.';
+              usersContainer.appendChild(errorElement);
+            }
+          })
+          .catch(error => {
+            // Handle fetch error
+            console.error('Error fetching users:', error);
+          });
+      });
+    });
+  </script>
+</head>
+<body>
+
+  <div class="admin-container">
+    <h1>Welcome to the Admin Panel</h1>
+    <p>This is the admin panel for managing your website.</p>
+    <button id="manageUsersBtn">Manage Users</button>
+    <button>Manage Content</button>
+    <button>Analytics</button>
+
+    <!-- Container to display users fetched via AJAX -->
+    <div id="usersContainer"></div>
+  </div>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+

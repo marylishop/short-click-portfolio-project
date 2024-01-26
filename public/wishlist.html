@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Wishlist - Short Click</title>
+    <!-- Add your CSS styles or link an external stylesheet here -->
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: hsl(353, 100%, 78%);
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .wishlist-item {
+            display: flex;
+            align-items: center;
+            border-bottom: 1px solid #ddd;
+            padding: 10px;
+        }
+
+        .wishlist-item img {
+            max-width: 100px;
+            margin-right: 20px;
+        }
+
+        .wishlist-item-details {
+            flex-grow: 1;
+        }
+
+        .wishlist-button {
+            background-color: hsl(353, 100%, 78%);
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .wishlist-button:hover {
+            background-color: hsl(353, 100%, 78%);
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Your Wishlist</h1>
+    </header>
+
+    <div class="container">
+
+        <!-- Sample Wishlist Items -->
+        <div class="wishlist-item">
+            <img src="./assets/images/products/1.jpg" alt="Product 1">
+            <div class="wishlist-item-details">
+                <h3>Product 1</h3>
+                <p>Price: $20.00</p>
+            </div>
+            <button class="wishlist-button">Add to Cart</button>
+        </div>
+
+        <div class="wishlist-item">
+            <img src="./assets/images/products/3.jpg" alt="Product 3">
+            <div class="wishlist-item-details">
+                <h3>Product 3</h3>
+                <p>Price: $25.00</p>
+            </div>
+            <button class="wishlist-button">Add to Cart</button>
+        </div>
+
+    </div>
+
+</body>
+</html>
+

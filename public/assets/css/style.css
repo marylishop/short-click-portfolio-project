@@ -2624,3 +2624,39 @@ footer {
   }
 
 }
+/* Wishlist Styles */
+.wishlist-container {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.wishlist-item {
+  border: 1px solid #ddd;
+  margin-bottom: 10px;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.wishlist-item img {
+  max-width: 100px;
+  max-height: 100px;
+  margin-right: 10px;
+}
+
+.wishlist-item-details {
+  flex: 1;
+}
+
+.wishlist-button {
+  background-color: #3498db;
+  color: #fff;
+  padding: 5px 10px;
+  border: none;
+  cursor: pointer;
+}
+
+.wishlist-button:hover {
+  background-color: #2980b9;
+}
