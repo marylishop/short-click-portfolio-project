@@ -1,6 +1,6 @@
 # SHORT CLICK E-commerce Website
 
-SHORT CLICK is a modern and robust e-commerce platform developed using the Django web framework for the backend and HTML, CSS, and JavaScript for the frontend. This project is designed with scalability and flexibility in mind, providing users with a seamless and engaging shopping experience.
+SHORT CLICK is a modern and robust e-commerce platform developed using the node js for the backend and HTML, CSS, and JavaScript for the frontend. This project is designed with scalability and flexibility in mind, providing users with a seamless and engaging shopping experience.
 <img width="737" alt="Screenshot 2024-01-18 at 22 45 52" src="https://github.com/marylishop/portfolio-project-alx/assets/127736868/483d2e7c-075e-4c2c-b23f-9fd026dcd5b1">
 
 ## Features
@@ -13,7 +13,7 @@ SHORT CLICK is a modern and robust e-commerce platform developed using the Djang
 
 ## Technologies Used
 
-- **Backend**: Django
+- **Backend**: node js express js 
 - **Frontend**: HTML, CSS, JavaScript
 
 ## Getting Started
@@ -33,7 +33,6 @@ pip install -r requirements.txt
 Run the Development Server:
 bash
 Copy code
-python manage.py runserver
 Access the Website:
 Open your browser and navigate to http://127.0.0.1:8000/
 Contributing
@@ -44,8 +43,8 @@ If you would like to contribute to the project, please follow our Contribution G
 
 Acknowledgments
 
-Special thanks to the Django community for the powerful web framework.
-Contact
+Special thanks to the node js express community for the powerful web framework.
+
 
 For any inquiries or feedback, please contact us at 
 mari97149@gmail.com 
