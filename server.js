@@ -1,17 +1,17 @@
-const express = require('express');
-const session = require('express-session');
-const passport = require('passport');
-const LocalStrategy = require('passport-local').Strategy;
-const bcrypt = require('bcryptjs');
-const mongoose = require('mongoose');
+import express from 'express';
 const app = express();
+
 const port = 3000;
+const productsRouter = require('./routes/products');
+const adminsRouter = require('./routes/admins');
+
 
 // Connect to MongoDB Atlas
-mongoose.connect('mongodb+srv://fatimazohralakhal32:Fati%40Rim@cluster0.qpcnaoc.mongodb.net/mydatabase?retryWrites=true&w=majority', {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-});
+mongoose.connect('mongodb+srv://fatimazohralakhal32:Fati%40Rim@cluster0.qpcnaoc.mongodb.net/mydatabase?retryWrites=true&w=majority', { useNewUrlParser: true, useUnifiedTopology: true });
+  connection.once('open', () => {
+  console.log("MongoDB database connection established successfully");
+})
+
 
 // Define User schema
 const User = mongoose.model('User', {
@@ -60,35 +60,13 @@ app.use(express.urlencoded({ extended: true }));
 app.use(session({ secret: 'Fati@Rim', resave: false, saveUninitialized: true }));
 app.use(passport.initialize());
 app.use(passport.session());
+app.use('/admins', adminsRouter);
 
-// Serve static files (HTML, CSS, JS, images) from the "public" directory
-app.use(express.static('public'));
+app.use(cors());
+app.use(bodyParser.json());
 
-// Admin panel route
-app.get('/admin', (req, res) => {
-  // Render your admin panel page here
-  res.sendFile(__dirname + '/public/admin.html');
-});
-
-// AJAX endpoint for managing users
-app.get('/admin/manageUsers', (req, res) => {
-  // Check if the user making the request is an admin
-  if (req.isAuthenticated() && req.user.isAdmin) {
-    // Fetch users from the database
-    User.find({})
-      .then(users => {
-        // Send the list of users as a response
-        res.json({ users: users });
-      })
-      .catch(err => {
-        console.error('Error fetching users:', err);
-        res.status(500).json({ error: 'Internal Server Error' });
-      });
-  } else {
-    // If the user is not authenticated or is not an admin, send an error response
-    res.status(403).json({ error: 'Permission Denied' });
-  }
-});
+app.use('/products', productsRouter);
+app.use('/admins', adminsRouter);
 
 // Start the server
 app.listen(port, () => {
