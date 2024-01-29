@@ -1,9 +1,7 @@
-
-let Product = require('../models/product.model');
 const express = require('express');
 const router = express.Router();
+const Product = require('../models/Admin'); // Import the Product model
 
-module.exports = router;
 router.route('/').get((req, res) => {
     Product.find()
         .then(products => res.json(products))
@@ -29,3 +27,6 @@ router.route('/add').post((req, res) => {
 });
 
 module.exports = router;
+
+
+
