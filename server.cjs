@@ -14,7 +14,7 @@ const port = 3000;
 app.use(express.static('frontend'));
 
 // Import models
-const Admin = require('./models/Admin'); // Corrected model name
+const User = require('./models/userModel'); // Changed from userModels to userModel
 
 // Connect to MongoDB Atlas
 mongoose.connect('mongodb+srv://fatimazohralakhal32:Fati%40Rim@cluster0.qpcnaoc.mongodb.net/mydatabase?retryWrites=true&w=majority', { useNewUrlParser: true, useUnifiedTopology: true });
@@ -25,15 +25,15 @@ connection.once('open', () => {
 
 // Passport setup
 passport.use(new LocalStrategy((username, password, done) => {
-  Admin.findOne({ username: username })
-    .then(admin => {
-      if (!admin) {
+  User.findOne({ username: username })
+    .then(user => {
+      if (!user) {
         return done(null, false, { message: 'Incorrect username.' });
       }
-      bcrypt.compare(password, admin.password)
+      bcrypt.compare(password, user.password)
         .then(res => {
           if (res) {
-            return done(null, admin);
+            return done(null, user);
           } else {
             return done(null, false, { message: 'Incorrect password.' });
           }
@@ -48,9 +48,9 @@ passport.serializeUser((user, done) => {
 });
 
 passport.deserializeUser((id, done) => {
-  Admin.findById(id)
-    .then(admin => {
-      done(null, admin);
+  User.findById(id)
+    .then(user => {
+      done(null, user);
     })
     .catch(err => {
       done(err, null);
@@ -60,7 +60,7 @@ passport.deserializeUser((id, done) => {
 // Express middleware
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-app.use(session({ secret: 'Fati@Rim', resave: false, saveUninitialized: true }));
+app.use(session({ secret: 'your-secret', resave: false, saveUninitialized: true }));
 app.use(passport.initialize());
 app.use(passport.session());
 app.use(cors());
@@ -68,10 +68,11 @@ app.use(bodyParser.json());
 
 // Import routers
 const productsRouter = require('./routes/Product');
-const adminsRouter = require('./routes/admin');
+const adminRouter = require('./routes/admin');
 
+// Use routers
 app.use('/products', productsRouter);
-app.use('/admin', adminsRouter);
+app.use('/admin', adminRouter);
 
 // Start the server
 app.listen(port, () => {
