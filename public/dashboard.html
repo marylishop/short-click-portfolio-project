@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Commerce Dashboard</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: hsl(353, 100%, 78%);
+        }
+
+        .dashboard-container {
+            display: flex;
+            min-height: 100vh;
+        }
+
+        .sidebar {
+            width: 200px;
+            background: ;
+            color: white;
+            padding: 20px;
+        }
+
+        .sidebar h2 {
+            color: black;
+        }
+
+        .sidebar nav a {
+            color:black;
+            text-decoration: none;
+            display: block;
+            padding: 10px;
+        }
+
+        .sidebar nav a:hover {
+            background:hsl(0, 3%, 94%);;
+        }
+
+        .main-content {
+            flex: 1;
+            padding: 20px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .main-content h1 {
+            margin-top: 0;
+            color: black;
+        }
+
+        .sales-chart {
+            width: 100%;
+            max-width: 600px;
+            margin: 20px 0;
+        }
+
+        #sales-stats {
+            margin-top: 20px;
+            color: white;
+        }
+
+        .customer-list {
+            margin-top: 30px;
+            color:black;
+        }
+
+        .customer-list table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+
+        .customer-list th, .customer-list td {
+            padding: 10px;
+            border: 1px solid black;
+            text-align: left;
+        }
+
+        .customer-list th {
+            background-color: #fff;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="dashboard-container">
+        <aside class="sidebar">
+            <h2>Dashboard</h2>
+            <nav>
+                <a href="#">Home</a>
+                <a href="#">Sales</a>
+                <a href="#">Products</a>
+                <a href="#">Customers</a>
+                <a href="#">Reports</a>
+                <a href="#">Settings</a>
+            </nav>
+        </aside>
+        <main class="main-content">
+            <h1>Welcome to your Dashboard</h1>
+            <div class="sales-chart">
+                <canvas id="salesChart"></canvas>
+            </div>
+            <div id="sales-stats">
+                <!-- Sales statistics will be loaded here -->
+            </div>
+            <div class="customer-list">
+                <h2>Customer List</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Name</th>
+                            <th>Email</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>John Doe</td>
+                            <td>john@example.com</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Jane Smith</td>
+                            <td>jane@example.com</td>
+                        </tr>
+                        <!-- Add more rows as needed -->
+                    </tbody>
+                </table>
+            </div>
+        </main>
+    </div>
+
+    <!-- Chart.js library for creating charts -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            loadSalesStatistics();
+            createSalesChart();
+        });
+
+        function loadSalesStatistics() {
+            // Dummy data for demonstration
+            const salesData = [
+                { month: 'January', sales: 120 },
+                { month: 'February', sales: 210 },
+                { month: 'March', sales: 150 },
+                // Add more data as needed
+            ];
+
+            const salesContainer = document.getElementById('sales-stats');
+            salesContainer.innerHTML = '<h2>Sales Statistics</h2>';
+            
+            salesData.forEach(data => {
+                const div = document.createElement('div');
+                div.textContent = `${data.month}: ${data.sales}`;
+                salesContainer.appendChild(div);
+            });
+        }
+
+        function createSalesChart() {
+            const ctx = document.getElementById('salesChart').getContext('2d');
+            const salesChart = new Chart
